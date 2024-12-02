@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Իմ Միջոցառումները</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #121212;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            height: auto;
+            padding: 20px;
+            overflow-x: hidden;
+            margin-top: 20px;
+            /* Added margin to push content down */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1600px;
+            text-align: center;
+            margin: 0 auto;
+            /* Ensure it's centered */
+        }
+
+        .social-section {
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .facebook-section {
+            border-color: #1877f2;
+        }
+
+        .facebook-section:hover {
+            border-color: #005bb5;
+        }
+
+        .telegram-section {
+            border-color: #0088cc;
+        }
+
+        .telegram-section:hover {
+            border-color: #005e75;
+        }
+
+        .instagram-section {
+            border-color: #e1306c;
+        }
+
+        .instagram-section:hover {
+            border-color: #bc2a8d;
+        }
+
+        .discord-section {
+            border-color: #7289da;
+        }
+
+        .discord-section:hover {
+            border-color: #4e70c3;
+        }
+
+        /* New Websites Section */
+        .websites-section {
+            border-color: #34a853;
+            /* Greenish color */
+        }
+
+        .websites-section:hover {
+            border-color: #0a9d3f;
+            /* Darker greenish shade */
+        }
+
+
+        .social-card {
+            background-color: #1a1a1a;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 40px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+
+        .social-card a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            text-decoration: none;
+        }
+
+        .facebook {
+            border-color: #1877f2;
+        }
+
+        .facebook:hover {
+            border-color: #005bb5;
+        }
+
+        .telegram {
+            border-color: #0088cc;
+        }
+
+        .telegram:hover {
+            border-color: #005e75;
+        }
+
+        .instagram {
+            border-color: #e1306c;
+        }
+
+        .instagram:hover {
+            border-color: #bc2a8d;
+        }
+
+        .discord {
+            border-color: #7289da;
+        }
+
+        .discord:hover {
+            border-color: #4e70c3;
+        }
+
+        .websites {
+            border-color: #34a853;
+        }
+
+        .websites:hover {
+            border-color: #0a9d3f;
+        }
+
+        /* Logo Styles */
+        .social-logo {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        /* Facebook logo */
+        .facebook .social-logo {
+            content: url('facebook.png');
+        }
+
+        /* Telegram logo */
+        .telegram .social-logo {
+            content: url('telegram.png');
+        }
+
+        /* Instagram logo */
+        .instagram .social-logo {
+            content: url('instagram.png');
+        }
+
+        /* Google Chrome logo */
+        .websites .social-logo {
+            content: url('websites.png');
+        }
+
+        /* Channel name text */
+        .social-card p {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Websites List */
+        .websites-list {
+            color: white;
+            font-size: 18px;
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .websites-list li {
+            margin: 10px 0;
+        }
+
+        .websites-list a {
+            color: #4285f4;
+            text-decoration: none;
+        }
+
+        .websites-list a:hover {
+            text-decoration: underline;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #ff0080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(255, 0, 128, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #d1006a;
+            box-shadow: 0 0 15px rgba(255, 0, 128, 1);
+        }
+
+        .title {
+            font-size: 42px;
+            font-weight: bold;
+            color: #0ff;
+            text-shadow: 0 0 2px #0ff, 0 0 5px #0ff, 0 0 7px #00f, 0 0 10px #00f, 0 0 12px #00f;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="javascript:history.back()" class="back-button">Վերադառնալ</a>
+    <div class="container">
+        <div class="title">Իմ Միջոցառումները</div>
+
+
+        <!-- Websites Section -->
+        <div class="social-section websites-section">
+            <div class="social-card websites">
+                <a href="https://visityerevan.am/browse/things-to-do-events/en/?sel_filters=&current_page=1&start_date=29%2F11%2F2024&search_title="
+                    target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1200px-Google_Chrome_icon_%28February_2022%29.svg.png"
+                        alt="Google Chrome Logo">
+                    <p>Visit Yerevan</p>
+                </a>
+            </div>
+            <div class="social-card websites">
+                <a href="https://www.eventbrite.com/d/armenia--yerevan/free--events/?page=1" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1200px-Google_Chrome_icon_%28February_2022%29.svg.png"
+                        alt="Google Chrome Logo">
+                    <p>Event Brite</p>
+                </a>
+            </div>
+            <div class="social-card websites">
+                <a href="https://allevents.in/yerevan/all?ref=new-cityhome-popular#" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1200px-Google_Chrome_icon_%28February_2022%29.svg.png"
+                        alt="Google Chrome Logo">
+                    <p>All Events</p>
+                </a>
+            </div>
+            <div class="social-card websites">
+                <a href="https://www.tomsarkgh.am/hy/category/%D4%B1%D5%B5%D5%AC" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1200px-Google_Chrome_icon_%28February_2022%29.svg.png"
+                        alt="Google Chrome Logo">
+                    <p>Tomsarkgh</p>
+                </a>
+            </div>
+            <div class="social-card websites">
+                <a href="https://studentaffairs.aua.am/events-calendar/" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1200px-Google_Chrome_icon_%28February_2022%29.svg.png"
+                        alt="Google Chrome Logo">
+                    <p>AUA Events</p>
+                </a>
+            </div>
+            <div class="social-card websites">
+                <a href="https://expo.am/" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1200px-Google_Chrome_icon_%28February_2022%29.svg.png"
+                        alt="Google Chrome Logo">
+                    <p>Expo AM</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Facebook Section -->
+        <div class="social-section facebook-section">
+            <div class="social-card facebook">
+                <a href="https://www.facebook.com/ElitePlaza/" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png"
+                        alt="Facebook Logo">
+                    <p>Elite Plaza</p>
+                </a>
+            </div>
+            <div class="social-card facebook">
+                <a href="https://www.facebook.com/AITC.ArmIndianCenter/" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png"
+                        alt="Facebook Logo">
+                    <p>AITC Arm Indian Center</p>
+                </a>
+            </div>
+            <div class="social-card facebook">
+                <a href="https://www.facebook.com/EngineeringCity.am/" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png"
+                        alt="Facebook Logo">
+                    <p>Engineering City</p>
+                </a>
+            </div>
+            <div class="social-card facebook">
+                <a href="https://www.facebook.com/events?source=46&action_history=null" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png"
+                        alt="Facebook Logo">
+                    <p>Facebook Events</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Telegram Section -->
+        <div class="social-section telegram-section">
+            <div class="social-card telegram">
+                <a href="https://t.me/s/gitakclub" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1200px-Telegram_logo.svg.png"
+                        alt="Telegram Logo">
+                    <p>Gitak Club</p>
+                </a>
+            </div>
+            <div class="social-card telegram">
+                <a href="https://t.me/s/youropportunities2017" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1200px-Telegram_logo.svg.png"
+                        alt="Telegram Logo">
+                    <p>Your Opportunities</p>
+                </a>
+            </div>
+            <div class="social-card telegram">
+                <a href="https://t.me/s/yo_org" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1200px-Telegram_logo.svg.png"
+                        alt="Telegram Logo">
+                    <p>YO Org / Business / Startups</p>
+                </a>
+            </div>
+            <div class="social-card telegram">
+                <a href="https://t.me/s/polytech_am" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1200px-Telegram_logo.svg.png"
+                        alt="Telegram Logo">
+                    <p>Polytech AM</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Instagram Section -->
+        <div class="social-section instagram-section">
+            <div class="social-card instagram">
+                <a href="https://www.instagram.com/stories/highlights/18025334350965501" target="_blank">
+                    <img class="social-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                        alt="Instagram Logo">
+                    <p>Mantashyants Events</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Discord Section -->
+        <div class="social-section discord-section">
+            <div class="social-card discord">
+                <a href="https://discord.com/channels/1140986413991604266/1140986414582988832" target="_blank">
+                    <img class="social-logo"
+                        src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png"
+                        alt="Discord Logo">
+                    <p>Cybersecurity Summer</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<!-- 
+https://visityerevan.am/browse/things-to-do-events/en/?sel_filters=&current_page=1&start_date=29%2F11%2F2024&search_title=
+https://www.eventbrite.com/d/armenia--yerevan/free--events/?page=1
+https://allevents.in/yerevan/all?ref=new-cityhome-popular#
+https://www.tomsarkgh.am/hy/category/%D4%B1%D5%B5%D5%AC
+https://studentaffairs.aua.am/events-calendar/
+https://expo.am/
+
+
+https://discord.com/channels/1140986413991604266/1140986414582988832
+
+
+https://t.me/s/gitakclub
+https://t.me/s/youropportunities2017
+https://t.me/s/yo_org
+https://t.me/s/polytech_am
+
+
+Mantashyants Open Event - https://www.instagram.com/stories/highlights/18025334350965501/
+
+
+https://www.facebook.com/ElitePlaza/
+https://www.facebook.com/AITC.ArmIndianCenter/
+https://www.facebook.com/EngineeringCity.am/
+https://www.facebook.com/events?source=46&action_history=null
+
+-->
